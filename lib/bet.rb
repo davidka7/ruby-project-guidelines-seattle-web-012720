@@ -6,7 +6,7 @@ class Bet < ActiveRecord::Base
 
 
     def self.create_new_race(racez,locationz) #create
-        Random.rand(80).times do Bet.create(race: racez, bet: Random.rand(50000),location: locationz, better_id: Better.all.sample.id, biker_id: Biker.all.sample.id) end
+        Random.rand(4..6).times do Bet.create(race: racez, bet: Random.rand(50000),location: locationz, better_id: Better.all.sample.id, biker_id: Biker.all.sample.id) end
     end
 
     def self.find_by_name_of_race(racez) #read
@@ -15,6 +15,55 @@ class Bet < ActiveRecord::Base
 
     def self.destroy_race(racez) #destroy
         self.destroy_by(race: racez)
+        puts "Race Over"
+    end
+
+    def self.all_of_people_in_race(racez)
+        a = Bet.all.where(race: racez).map{|number|number.biker_id}
+        
+        ##a=[1,6,3,4,6,9]
+        #do 
+           b =  a.map{|b|Biker.all.find(b)}
+            b.map{|b_obj|b_obj.name}
+          #z =   Biker.all.select{|object|object.id == }
+          #b = Biker.all.select{|inside|inside.id}
+           # a.select{|a|a==b}
+        #end
+
+
+       # if i < a.length.times  
+       # a.length.times do Biker.all.find_by(id:a[i]).name i+=1 end
+        #end
+    end
+
+    def self.count_of_people_in_race(racez)
+        a = Bet.all.where(race: racez).map{|number|number.biker_id}.uniq
+    end
+
+    def self.who_will_win_race_random_biker(racez) #read
+       a = Bet.all.where(race: racez).map{|number|number.biker_id}[Random.rand(1..Bet.count_of_people_in_race(racez).length)-1]
+       Biker.all.find_by(id: a).name
+    end
+
+    def self.who_won_on_what_race(racez) #read
+        p "The winner is #{Bet.who_will_win_race_random_biker(racez)}"
+    end
+
+    def self.see_who_is_in_a_race(racez)
+        Bet.all.where(race: racez)
+    end
+
+    def self.i_bet_money_on_you(racez, player_bet_on, bets) #read
+        #"The winner is #{player_bet_on}"
+    #Bet.who_won_on_what_race(racez)
+       if z = "#{Bet.who_won_on_what_race(racez)}" == "The winner is #{player_bet_on}"
+            puts "Dang, your so good at this, you won three times more than you original #{bets}"
+            Bet.destroy_race(racez)
+        else
+            puts "Okay you are pretty bad at this, if you have no more money, get out"
+            z
+           Bet.destroy_race(racez)
+        end
     end
 
    # def self.change_race_name(racez, new_race_name) #update

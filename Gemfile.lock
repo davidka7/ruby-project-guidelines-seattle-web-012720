@@ -6,6 +6,7 @@ GEM
     activerecord (6.0.2.1)
       activemodel (= 6.0.2.1)
       activesupport (= 6.0.2.1)
+    activerecord-reset-pk-sequence (0.2.1)
     activesupport (6.0.2.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
@@ -28,6 +29,7 @@ GEM
     rack (2.2.2)
     rack-protection (2.0.8.1)
       rack
+    rake (13.0.1)
     require_all (3.0.0)
     ruby2_keywords (0.0.2)
     sinatra (2.0.8.1)
@@ -49,8 +51,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-reset-pk-sequence
   faker (~> 2.10, >= 2.10.1)
   pry
+  rake (~> 13.0, >= 13.0.1)
   require_all
   sinatra-activerecord
   sqlite3

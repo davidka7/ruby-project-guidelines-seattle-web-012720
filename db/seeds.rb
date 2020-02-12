@@ -35,15 +35,20 @@ require "pry"
         #a = 5.times do (location: Faker::Games::ElderScrolls.city) end
           #  binding.pry
         #b = 5.times do (race: Faker::Games::ElderScrolls.name) end
-
+        Biker.delete_all
+        Biker.reset_pk_sequence
+        Better.delete_all
+      Better.reset_pk_sequence
+         Bet.delete_all
+         Bet.reset_pk_sequence
     #    binding.pry
-          80.times do Biker.create(name: Faker::FunnyName.name, age: Random.rand(50)) end
-          4000.times do Better.create(name: Faker::Name.name) end
-         Random.rand(80).times do Bet.create(race: "Joongle Death", bet: Random.rand(50000),location: "Solitude", better_id: Better.all.sample.id, biker_id: Biker.all.sample.id) end
-         Random.rand(80).times do Bet.create(race: "Frost Trail", bet: Random.rand(50000),location: "Cyrodul", better_id: Better.all.sample.id, biker_id: Biker.all.sample.id) end
-         Random.rand(80).times do Bet.create(race:"Bloody Giver", bet: Random.rand(50000),location: "Towers Of Doom", better_id: Better.all.sample.id, biker_id: Biker.all.sample.id) end
-         Random.rand(80).times do Bet.create(race: "When the Clock hits ZERO", bet: Random.rand(50000),location: "Potato Town", better_id: Better.all.sample.id, biker_id: Biker.all.sample.id) end  
-         Random.rand(80).times do Bet.create(race: "Dark Sky", bet: Random.rand(50000),location: "Center Village", better_id: Better.all.sample.id, biker_id: Biker.all.sample.id) end
+          25.times do Biker.create(name: Faker::FunnyName.name, age: Random.rand(15..50)) end
+          100.times do Better.create(name: Faker::Name.name) end
+         Random.rand(4..6).times do Bet.create(race: "Joongle Death", bet: Random.rand(50000),location: "Solitude", better_id: Better.all.sample.id, biker_id: Biker.all.sample.id) end
+         Random.rand(4..6).times do Bet.create(race: "Frost Trail", bet: Random.rand(50000),location: "Cyrodul", better_id: Better.all.sample.id, biker_id: Biker.all.sample.id) end
+         Random.rand(4..6).times do Bet.create(race:"Bloody Giver", bet: Random.rand(50000),location: "Towers Of Doom", better_id: Better.all.sample.id, biker_id: Biker.all.sample.id) end
+         Random.rand(4..6).times do Bet.create(race: "When the Clock hits ZERO", bet: Random.rand(50000),location: "Potato Town", better_id: Better.all.sample.id, biker_id: Biker.all.sample.id) end  
+         Random.rand(4..6).times do Bet.create(race: "Dark Sky", bet: Random.rand(50000),location: "Center Village", better_id: Better.all.sample.id, biker_id: Biker.all.sample.id) end
          
 
       
