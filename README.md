@@ -1,10 +1,16 @@
-# Module One Final Project Guidelines
+# My Final Project Set Up
 
-Congratulations, you're at the end of module one! You've worked crazy hard to get here and have learned a ton.
+# Congratulations, your about to emerse into my project!!!
+# You'll be able to dive into a multi-universe game of spatial riders.
+# You will be able to join the other betters in betting on the Bikers.
 
-For your final project, we'll be building a Command Line database application.
+## Let me give you a little overview on how to set it up.
 
-## Project Requirements
+-Fork and clone this project
+-run 'Bundle Install' in your terminal
+-On the command line of your terminal run ruby 'bin/run.rb' to run this file
+
+
 
 ### Option One - Data Analytics Project
 
