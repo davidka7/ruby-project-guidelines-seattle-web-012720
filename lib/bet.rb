@@ -2,8 +2,9 @@ class Bet < ActiveRecord::Base
     belongs_to :better
     belongs_to :biker
 
-
-
+    def self.all_races
+        Bet.all.map{|objetcs|objetcs.race}.uniq
+    end
 
     def self.create_new_race(racez,locationz) #create
         Random.rand(4..6).times do Bet.create(race: racez, bet: Random.rand(50000),location: locationz, better_id: Better.all.sample.id, biker_id: Biker.all.sample.id) end
