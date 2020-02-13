@@ -6,6 +6,10 @@ class Bet < ActiveRecord::Base
         Bet.all.map{|objetcs|objetcs.race}.uniq
     end
 
+    def self.all_location
+        Bet.all.map{|objetcs|objetcs.location}.uniq
+    end
+
     def self.create_new_race(racez,locationz) #create
         Random.rand(4..6).times do Bet.create(race: racez, bet: Random.rand(50000),location: locationz, better_id: Better.all.sample.id, biker_id: Biker.all.sample.id) end
     end
@@ -66,10 +70,10 @@ class Bet < ActiveRecord::Base
         #"The winner is #{player_bet_on}"
     #Bet.who_won_on_what_race(racez)
        if z = "#{Bet.who_won_on_what_race(racez)}" == "The winner is #{player_bet_on}"
-            puts "Dang, your so good at this, you won three times more than you original #{bets}, congratulations to You and too #{self.all_of_betters_who_bet_on_winner(racez)}"
+            puts "Dang, your so good at this, you won three times more than you original #{bets}, congratulations to You and too #{Bet.all_of_betters_who_bet_on_winner(racez)}"
             Bet.destroy_race(racez)
         else
-            puts "Okay you are pretty bad at this, if you have no more money, get out!! All Betters,#{self.all_of_betters_who_bet_on_winner(racez)} who bet on the winner rider can proceed to the virtual office to collect their money"
+            puts "Okay you are pretty bad at this, if you have no more money, get out!! All Betters,#{Bet.all_of_betters_who_bet_on_winner(racez)} who bet on the winner rider can proceed to the virtual office to collect their money"
             z
 
            Bet.destroy_race(racez)
