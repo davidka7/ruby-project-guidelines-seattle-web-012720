@@ -53,15 +53,24 @@ class Bet < ActiveRecord::Base
         Bet.all.where(race: racez)
     end
 
+    def self.all_of_betters_who_bet_on_winner(racez)
+        a = Bet.all.where(biker_id: Biker.all.select{|object|object.name == Bet.who_will_win_race_random_biker(racez)}).map{|the_ids|the_ids.better_id}
+        ##a=[1,6,3,4,6,9]
+        #do 
+           b =  a.map{|b|Better.all.find(b)}
+            b.map{|b_obj|b_obj.name}
+    end
+
     def self.i_bet_money_on_you(racez, player_bet_on, bets) #read
         #"The winner is #{player_bet_on}"
     #Bet.who_won_on_what_race(racez)
        if z = "#{Bet.who_won_on_what_race(racez)}" == "The winner is #{player_bet_on}"
-            puts "Dang, your so good at this, you won three times more than you original #{bets}"
+            puts "Dang, your so good at this, you won three times more than you original #{bets}, congratulations to You and too #{self.all_of_betters_who_bet_on_winner(racez)}"
             Bet.destroy_race(racez)
         else
-            puts "Okay you are pretty bad at this, if you have no more money, get out"
+            puts "Okay you are pretty bad at this, if you have no more money, get out!! All Betters,#{self.all_of_betters_who_bet_on_winner(racez)} who bet on the winner rider can proceed to the virtual office to collect their money"
             z
+
            Bet.destroy_race(racez)
         end
     end
