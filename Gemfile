@@ -10,3 +10,4 @@ gem "require_all"
 gem 'faker', '~> 2.10', '>= 2.10.1'
 gem 'activerecord-reset-pk-sequence'
 gem 'rake', '~> 13.0', '>= 13.0.1'
+gem 'tty', '~> 0.10.0'
