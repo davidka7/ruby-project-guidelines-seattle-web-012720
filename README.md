@@ -10,7 +10,9 @@
 #### -run 'Bundle Install' in your terminal
 #### -On the command line of your terminal run 'ruby bin/run.rb' to run this file
 
+### Purpose
 
+#### Imagine you went up to Better station, a casino-style environment, gave the nice lady your credit card information, she checked your status and sent you over to a terminal, while this process is happening, the races are happening, unless they were altered, they are rerun. 
 ### Play Time
 
 #### You join a game as better, your ready to bet all your money on your favorite Bikers. You feel confident in yourself and want to check out all the races, there locations, and any other details provided. If you reject many of the menu proposals, you'll eventually be kicked out. You are also considered a VIP user, well hopefully. Meaning you can edit the races, change their names "based on your friends (not really) acceptance", or sponsor the race in one of your own arenas, by changing its location. Probably the coolest thing is you can create your own race, or even bet all your money in hopes of winning much more....but be careful you might lose it allllllllllllllllLL!L!L!L!L!L!L!L!L!L!LL!!
