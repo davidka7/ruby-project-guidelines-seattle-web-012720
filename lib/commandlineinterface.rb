@@ -1,4 +1,3 @@
-
 class CommandLineInterface
 
     
@@ -52,6 +51,8 @@ def self.riders
     if Bet.all_races.select{|races|races == answer} == [answer]
         puts "Here are all the Bikers within this race!!!!".colorize(:light_blue) 
         puts "#{Bet.all_of_people_in_race(answer)}".colorize(:light_green) 
+        puts "type in 'enter' to procceed"
+        gets.chomp
         CommandLineInterface.all_options
     elsif answer == "create"
         CommandLineInterface.racez
@@ -116,8 +117,8 @@ def self.riders
 
 
 
-                        2. They Robbed after they gave me the money, I was walking down the little street called deads man road when i got off the hippo transit on exit 40,
-                        I smashed with a rock by two man wearing Universal Shirts, one of them Cashiers at the office, i could swear he looked like him, he was just twice bigger!!
+                        2. They Robbed me after they gave me the money, I was walking down the little street called deads man road when i got off the hippo transit on exit 40,
+                        I got smashed with a rock by two man wearing Universal Shirts, one of them looked like the Cashiers at the office, i could swear he looked like him, he was just twice as big!!
                         "
 
                     
@@ -143,7 +144,14 @@ def self.riders
                             puts "enter bidding amount"
                             suppert = gets.chomp
                             Bet.i_bet_money_on_you(answer, baby, suppert)
-                            CommandLineInterface.all_options
+                            puts "type in 'enter' to procceed"
+                            gets.chomp
+                            
+                            self.all_options
+                            #else
+                              #  puts "got an error in grammer try again"
+                               # CommandLineInterface.all_options
+                         
                         else
                             puts "got an error in grammer try again"
                             CommandLineInterface.all_options
@@ -172,6 +180,8 @@ def self.riders
                 puts "After the name please enter a location"
                 diffVariable = gets.chomp
                     Bet.create_new_race(answer, diffVariable)
+                    puts "type in 'enter' to procceed"
+                    gets.chomp
                     CommandLineInterface.all_options
                 
             end
@@ -189,6 +199,8 @@ def self.riders
                 diffVariable = gets.chomp
                 if Bet.all_location.select{|location|location == answer} ==[answer]
                     Bet.change_location_of_race(answer, diffVariable)
+                    puts "type in 'enter' to procceed"
+                    gets.chomp
                     CommandLineInterface.all_options
                 else
                     puts "back to main menu"
@@ -207,6 +219,8 @@ def self.riders
                 diffVariable = gets.chomp
                 if Bet.all_races.select{|races|races == answer} == [answer]
                     Bet.change_name_of_race(answer, diffVariable)
+                    puts "type in 'enter' to procceed"
+                    gets.chomp
                     CommandLineInterface.all_options
                 else 
                     puts "back to main menu"
