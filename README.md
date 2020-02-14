@@ -6,9 +6,9 @@
 
 ### Let me give you a little overview on how to set it up.
 
--Fork and clone this project
--run 'Bundle Install' in your terminal
--On the command line of your terminal run 'ruby bin/run.rb' to run this file
+####-Fork and clone this project
+####-run 'Bundle Install' in your terminal
+####-On the command line of your terminal run 'ruby bin/run.rb' to run this file
 
 ## Images
  
