@@ -183,7 +183,7 @@ def self.riders
                 
                 
                 ".colorize(:light_red) 
-               array = Bet.all_races
+               array = Bet.all_races.
                array1 = array << "race"
                array2 = array1 << "name"
                array3 = array2 << "location"
@@ -287,7 +287,7 @@ def self.riders
                         puts "enter in first a players name"
                         @prompt = TTY::Prompt.new
                 
-                        baby = @prompt.select("Here are the bikers you can bet on", Bet.all_of_people_in_race(answer)) 
+                        baby = @prompt.select("Here are the bikers you can bet on", Bet.all_of_people_in_race(answer).uniq) 
                         #baby = gets.chomp
                         
 
