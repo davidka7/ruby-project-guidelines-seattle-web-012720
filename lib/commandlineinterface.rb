@@ -135,7 +135,7 @@ def self.riders
                array6 = array5 << "Secret_Code"
                 @prompt = TTY::Prompt.new
               
-              answer = @prompt.select("Here are the racers(green) you can bet on, there locations(blue) and every other menu option(yellow):", array6) 
+              answer = @prompt.select("Here are the races you can bet on, there locations and every other menu option:", array6) 
               # puts "Here are the races you can bet on"
        #puts Bet.all_races
 
@@ -253,6 +253,7 @@ def self.riders
                             
                             
                             "
+                            gets.chomp
                             
                             self.all_options
                             #else
@@ -324,6 +325,7 @@ def self.riders
                     
                     
                     press 'enter' to continue"
+                    gets.chomp
                     CommandLineInterface.all_options
                 else
                     puts "back to main menu"
