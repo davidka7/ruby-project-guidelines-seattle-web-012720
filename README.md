@@ -1,4 +1,4 @@
-# Alt-My Final Project Set Up
+# My Final Project Set Up
 
 ## Congratulations, your about to emerse into my project!!!
 ## You'll be able to dive into a multi-universe game of spatial riders.
