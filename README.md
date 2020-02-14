@@ -13,7 +13,7 @@
 
 ### Play Time
 
-#### You join a game as better, your ready to bet all your money on your favorite Bikers. You feel confident in yourself and want to check out all the races, there locations, any other details provided, if you reject many op the menu proposals, you'll eventually be kicked out. You are also considered a VIP user. Meaning you can edit the races, change their names "based on your friends (not really) acceptance", or sponsor the race in one of your arenas, you can as well change it location. Probably the coolest thing is you can create your own race, or even bet all your money in hopes of winning much more....but be careful you might lose it allllllllllllllllLL!L!L!L!L!L!L!L!L!L!LL!!
+#### You join a game as better, your ready to bet all your money on your favorite Bikers. You feel confident in yourself and want to check out all the races, there locations, and any other details provided. If you reject many of the menu proposals, you'll eventually be kicked out. You are also considered a VIP user, well hopefully. Meaning you can edit the races, change their names "based on your friends (not really) acceptance", or sponsor the race in one of your own arenas, by changing its location. Probably the coolest thing is you can create your own race, or even bet all your money in hopes of winning much more....but be careful you might lose it allllllllllllllllLL!L!L!L!L!L!L!L!L!L!LL!!
 ####
 ####
 ####
