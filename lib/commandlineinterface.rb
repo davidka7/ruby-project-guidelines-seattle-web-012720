@@ -112,7 +112,7 @@ def self.riders
                         (͡ ͡° ͜ つ ͡͡°)
                         (• Ε •)
                         (ง'̀-'́)ง
-                        (ಥ﹏ಥ)
+                            (ಥ﹏ಥ)
                         ﴾͡๏̯͡๏﴿ O
 
 
@@ -121,7 +121,8 @@ def self.riders
                         I got smashed with a rock by two man wearing Universal Shirts, one of them looked like the Cashiers at the office, i could swear he looked like him, he was just twice as big!!
                         "
 
-                    
+                        puts "Press enter to go back to main menu"
+                        gets.chomp
                             CommandLineInterface.all_options
                        
 
