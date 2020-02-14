@@ -85,16 +85,26 @@ def self.riders
                 and the race dissapears from the account that you bid on.
                 
                 6. Secret Account, the password is not 'Secret_Code'".colorize(:light_red) 
+               array = Bet.all_races|Bet.all_location
+               array1 = array << "race"
+               array2 = array1 << "name"
+               array3 = array2 << "location"
+               array4 = array3 << "id"
+               array5 = array4 << "exit"
+               array6 = array5 << "Secret_Code"
+                @prompt = TTY::Prompt.new
+              
+              answer = @prompt.select("Here are the bikers you can bet on, there locations and other menu options:", array6) 
+              # puts "Here are the races you can bet on"
+       #puts Bet.all_races
 
+               # puts "Here are the races you can bet on" 
+               # puts "Here are the Present races"
                 
-
-                puts "Here are the races you can bet on" 
-                puts "Here are the Present races"
-                puts Bet.all_races
-                puts "Here are the locations of all races"
-                puts Bet.all_location
+               # puts "Here are the locations of all races"
+               # puts Bet.all_location
                 
-                answer = gets.chomp
+               
                 if answer == "race"
 
                         CommandLineInterface.racez
@@ -135,10 +145,16 @@ def self.riders
                 elsif answer == "id"
                     CommandLineInterface.idz
                 elsif Bet.all_races.select{|race|race == answer} == [answer]
-                puts Bet.all_of_people_in_race(answer)
+
+                
+                
                     if  Bet.all_races.select{|race|race == answer} == [answer]
                         puts "enter in first a players name"
-                        baby = gets.chomp
+                        @prompt = TTY::Prompt.new
+                
+                        baby = @prompt.select("Here are the bikers you can bet on", Bet.all_of_people_in_race(answer)) 
+                        #baby = gets.chomp
+                        
 
 
                         if  Bet.all_of_people_in_race(answer).select{|player|player == baby } == [baby]
