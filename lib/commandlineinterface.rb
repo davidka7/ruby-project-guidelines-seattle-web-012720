@@ -3,12 +3,67 @@ class CommandLineInterface
     
 
     def greet
+       puts "
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       "
 
         url= "http://artii.herokuapp.com/make?text=Hello+World"
         uri = URI.parse(url)
         response = Net::HTTP.get_response(uri)
         puts response.body
         puts 'Welcome to the Universal Races, the best web to bet on your favorite Riders!'.colorize(:light_blue) 
+        puts "
+        
+        
+    
+        
+        
+        
+        You've just entered a Multi-Universe Arena. Here there a lot of Bikers,
+    who compete for the grand prize. You as a user will be betting on riders 
+    in hopes of winning money, just remember the other options might also charge
+    you. Here in this scenario, you went up to Betting station, in a casino-style environment,
+    to a nice lady you hand over your credit card information, she checked your status
+    and sent you over to a terminal, and now your credit card is connected to the terminal,
+    play on.
+    
+    "
+        
         CommandLineInterface.run
     end
   
@@ -75,7 +130,9 @@ def self.riders
 
 
     def self.all_options 
-        puts "
+
+
+       
         
         
         
@@ -94,7 +151,7 @@ def self.riders
         
         
         
-        "
+        
         url= "http://artii.herokuapp.com/make?text=Option+Menu"
         uri = URI.parse(url)
         response = Net::HTTP.get_response(uri)
