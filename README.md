@@ -19,8 +19,15 @@
 ####
 
 ## Images
- 
+ ### Here is my relationship Model, my setup
  ![alt text](https://github.com/davidka7/ruby-project-guidelines-seattle-web-012720/blob/master/Screen%20Shot%202020-02-13%20at%202.38.20%20PM.png)
+ ### Here is begging of the run, sets you up with a basic Yess or NOO question
+ ![alt text](https://github.com/davidka7/ruby-project-guidelines-seattle-web-012720/blob/master/Screen%20Shot%202020-02-14%20at%209.29.11%20AM.png)
+ ### You are eventually sent over to main menu where you can do whatever you want, choose to proceed or leave based on the options given
+ ![alt text](https://github.com/davidka7/ruby-project-guidelines-seattle-web-012720/blob/master/Screen%20Shot%202020-02-14%20at%209.29.36%20AM.png)
+ 
+ 
+
 ## Youtube link
 
 ## Credits
