@@ -42,7 +42,7 @@ require "pry"
          Bet.delete_all
          Bet.reset_pk_sequence
     #    binding.pry
-          25.times do Biker.create(name: Faker::FunnyName.name, age: Random.rand(15..50)) end
+          130.times do Biker.create(name: Faker::FunnyName.name, age: Random.rand(15..50)) end
           100.times do Better.create(name: Faker::Name.name) end
          Random.rand(4..6).times do Bet.create(race: "Joongle Death", bet: Random.rand(50000),location: "Solitude", better_id: Better.all.sample.id, biker_id: Biker.all.sample.id) end
          Random.rand(4..6).times do Bet.create(race: "Frost Trail", bet: Random.rand(50000),location: "Cyrodul", better_id: Better.all.sample.id, biker_id: Biker.all.sample.id) end
