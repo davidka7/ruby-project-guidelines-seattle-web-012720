@@ -126,7 +126,7 @@ def self.riders
                 
                 
                 ".colorize(:light_red) 
-               array = Bet.all_races|Bet.all_location
+               array = Bet.all_races
                array1 = array << "race"
                array2 = array1 << "name"
                array3 = array2 << "location"
