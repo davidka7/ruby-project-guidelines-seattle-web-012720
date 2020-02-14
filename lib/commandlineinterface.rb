@@ -23,10 +23,14 @@ class CommandLineInterface
         puts Bet.all_races
         CommandLineInterface.riders
      elsif answer == "N"
+        puts "are you really sure?? Well if you are then press 'enter' to procceed".colorize(:light_purple) 
+        gets.chomp
        CommandLineInterface.leave_or_stay
 
     else
         puts "goodbye"
+        gets.chomp
+        CommandLineInterface.sike
     end
 
 end
@@ -39,8 +43,15 @@ def self.leave_or_stay
         CommandLineInterface.all_options
     else
        puts "goodbye"
+       CommandLineInterface.sike
     end
+    
+end
 
+def self.sike
+    puts "lOL YOU hAvnt Used alL youR monEy, be a good person aND GO bAck"
+    gets.chomp
+    CommandLineInterface.goodbye
 end
 
 def self.riders
@@ -64,12 +75,38 @@ def self.riders
 
 
     def self.all_options 
+        puts "
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+        
+        
+        
+        
+        "
         url= "http://artii.herokuapp.com/make?text=Option+Menu"
         uri = URI.parse(url)
         response = Net::HTTP.get_response(uri)
         puts response.body
 
-        puts "Hello, at the front office, you have many options, please enter for which you want to see or do.
+        puts "
+                
+                
+
+
+
+                Hello, at the front office, you have many options, please enter for which you want to see or do.
                 The options are: 
                 1. If you are Better, you have the option to create a race, please enter 'race'.
 
@@ -84,7 +121,11 @@ def self.riders
                 just remember since the races have already happened, you get your results immediately,
                 and the race dissapears from the account that you bid on.
                 
-                6. Secret Account, the password is not 'Secret_Code'".colorize(:light_red) 
+                6. Secret Account, the password is not 'Secret_Code'
+                
+                
+                
+                ".colorize(:light_red) 
                array = Bet.all_races|Bet.all_location
                array1 = array << "race"
                array2 = array1 << "name"
@@ -94,7 +135,7 @@ def self.riders
                array6 = array5 << "Secret_Code"
                 @prompt = TTY::Prompt.new
               
-              answer = @prompt.select("Here are the bikers you can bet on, there locations and other menu options:", array6) 
+              answer = @prompt.select("Here are the racers(green) you can bet on, there locations(blue) and every other menu option(yellow):", array6) 
               # puts "Here are the races you can bet on"
        #puts Bet.all_races
 
@@ -110,6 +151,30 @@ def self.riders
                         CommandLineInterface.racez
                 elsif answer == "Secret_Code"
                     puts "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     Bad Reviews Deleted:
                     
                     1. This game is based on luck not skill, It's sort of rigged!>!?@L@
@@ -129,14 +194,27 @@ def self.riders
 
                         2. They Robbed me after they gave me the money, I was walking down the little street called deads man road when i got off the hippo transit on exit 40,
                         I got smashed with a rock by two man wearing Universal Shirts, one of them looked like the Cashiers at the office, i could swear he looked like him, he was just twice as big!!
+                        
+                        
+
+
+
+
+
+
                         "
 
-                        puts "Press enter to go back to main menu"
+                        puts "Press enter to go back to main menu
+                        
+                        
+                        
+                        "
                         gets.chomp
                             CommandLineInterface.all_options
                        
 
                 elsif answer == "location"
+                    
                     CommandLineInterface.locationz
 
                 elsif answer == "name"
@@ -163,6 +241,18 @@ def self.riders
                             Bet.i_bet_money_on_you(answer, baby, suppert)
                             puts "type in 'enter' to procceed"
                             gets.chomp
+                            puts "
+                            
+                            
+                            
+                            Take a Break and think about you life and your mistakes, but if you won well good job.
+                            
+                            
+                            
+                            
+                            
+                            
+                            "
                             
                             self.all_options
                             #else
@@ -197,7 +287,14 @@ def self.riders
                 puts "After the name please enter a location"
                 diffVariable = gets.chomp
                     Bet.create_new_race(answer, diffVariable)
-                    puts "type in 'enter' to procceed"
+                    puts "
+                    
+                    type in 'enter' to procceed, you sponsored the new race with a investment of 100000, thanks....oh Im sorry 
+                    I'm sorry you seem to have an overdraft check your credit status.
+                    
+                    
+                    
+                    "
                     gets.chomp
                     CommandLineInterface.all_options
                 
@@ -210,6 +307,8 @@ def self.riders
                 puts "Enter leave if you want to go back to main menu, otherwise enter in first the orignial location"
                 answer = gets.chomp
                 if answer == "leave"
+                    puts "Be a good person and click enter"
+                    gets.chomp
                     CommandLineInterface.all_options
                 end
                 puts "Now enter in the new location"
@@ -218,6 +317,13 @@ def self.riders
                     Bet.change_location_of_race(answer, diffVariable)
                     puts "type in 'enter' to procceed"
                     gets.chomp
+
+                    puts "
+                    
+                    Could you believe you changed it, thank you, we have sent you the fee of changing a races location of 50000$
+                    
+                    
+                    press 'enter' to continue"
                     CommandLineInterface.all_options
                 else
                     puts "back to main menu"
@@ -238,6 +344,13 @@ def self.riders
                     Bet.change_name_of_race(answer, diffVariable)
                     puts "type in 'enter' to procceed"
                     gets.chomp
+                    "
+                    
+                    Could you believe you changed it, thank you, we have sent you the fee of changing the races name and getting everyone confused of 500000$
+                    
+                    
+                    press 'enter' to continue"
+                    gets.chomp
                     CommandLineInterface.all_options
                 else 
                     puts "back to main menu"
@@ -246,7 +359,264 @@ def self.riders
             end
 
             def self.idz
-                puts "'DownnnnnN!!!!!!!!!'Enter leave if you want to go back to main menu" # enter a race to see just ids, but the name of the race, location and bid amount will be shown!>!>!!!"
+                puts " 
+                
+                
+                
+                
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                
+                
+                
+                
+                ".colorize(:light_red) 
+                url= "http://artii.herokuapp.com/make?text=DOwnn+EnTer+'leave'+to+leave+to+leave"
+                uri = URI.parse(url)
+                response = Net::HTTP.get_response(uri)
+                puts response.body
+                puts "
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                "
+               # puts "'DownnnnnN!!!!!!!!!'Enter leave if you want to go back to main menu" # enter a race to see just ids, but the name of the race, location and bid amount will be shown!>!>!!!"
+                gets.chomp
+                puts "
+                
+
+
+
+
+
+
+
+
+
+
+
+
+                Give it 5 seconds we had a system glitch, try again
+                
+                
+
+
+
+                
+                
+                
+                
+                "
+                gets.chomp
+                puts "
+                
+
+
+
+
+
+
+
+
+
+
+
+
+                Give it 5 seconds we had a system glitch, try again
+                
+                
+
+
+
+                
+                
+                
+                
+                "
+                gets.chomp
+                puts "
+                
+
+
+
+
+
+
+
+
+
+
+
+
+                Give it 5 seconds we had a system glitch, try again
+                
+                
+
+
+
+                
+                
+                
+                
+                "
+                gets.chomp
+                puts "
+                
+
+
+
+
+
+
+
+
+
+
+
+
+                Give it 5 seconds we had a system glitch, try againzzzzzzz continue pressing enter
+                
+                
+
+
+
+                
+                
+                
+                
+                "
+                gets.chomp
+                puts "
+                
+
+
+
+
+
+
+
+
+
+
+
+
+                Give it 5 seconds we had a system glitch, try again zzzzzzzz
+                
+                
+
+
+
+                
+                
+                
+                
+                "
+                gets.chomp
+                puts "
+                
+
+
+
+
+
+
+
+
+
+
+
+
+                Give it 5 seconds we had a system glitch, try again zzz
+                
+                
+
+
+
+                
+                
+                
+                
+                "
+                gets.chomp
+                puts "
+                
+
+
+
+
+
+
+
+
+
+
+
+
+               Sorry I fell asleep, lets try again
+                
+                
+
+
+
+                
+                
+                
+                
+                "
+                gets.chomp
+                puts "
+                
+
+
+
+
+
+
+
+
+
+
+
+
+                Wait I think its finally working, try again
+                
+                
+
+
+
+                
+                
+                
+                
+                "
                 answer = gets.chomp
                 if answer == "leave"
                     CommandLineInterface.all_options
@@ -267,6 +637,13 @@ def self.riders
             if answer == "yess"
                 CommandLineInterface.all_options
             else
+                puts "We all are very sad, if you enter in anything, you'll be gone, and so will your money."
+                    gets.chomp
+                url= "http://artii.herokuapp.com/make?text=Forevorrrrzz"
+                uri = URI.parse(url)
+                response = Net::HTTP.get_response(uri)
+                puts response.body
+                    gets.chomp
                 puts "goodbye"
             end
 
